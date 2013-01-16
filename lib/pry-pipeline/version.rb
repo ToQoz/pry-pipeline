@@ -1,5 +1,3 @@
-module Pry
-  module Pipeline
-    VERSION = "0.0.1"
-  end
+module PryPipeline
+  VERSION = "0.0.1"
 end

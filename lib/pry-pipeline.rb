@@ -1,7 +1,7 @@
 require "pry-pipeline/version"
 
-module Pry
-  module Pipeline
-    # Your code goes here...
+module PryPipeline
+  if defined? Pry
+    require 'pry-pipeline/ext'
   end
 end
