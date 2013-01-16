@@ -83,7 +83,7 @@ end
 
 ## Tips
 
-In your pry.(if you use [ruby-anything](https://github.com/ToQoz/ruby-anything))
+In your ~/.pryrc.(if you use [ruby-anything](https://github.com/ToQoz/ruby-anything))
 
 ```ruby
 begin
