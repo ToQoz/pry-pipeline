@@ -57,10 +57,18 @@ end
 
 ```
 $ pry
-[1] pry(main)> 'foo' | -> o { o.class }
-=> String
-[1] pry(main)> 'foo' | -> o { puts o }
-foo
+[1] pry(main)> 'method' | -> v { "Pry.#{v}" } | '$'
+
+From: proc.c (C Method):
+Number of lines: 5
+Owner: Kernel
+Visibility: public
+
+VALUE
+rb_obj_method(VALUE obj, VALUE vid)
+{
+    return mnew(CLASS_OF(obj), obj, rb_to_id(vid), rb_cMethod, FALSE);
+}
 => nil
 ```
 
