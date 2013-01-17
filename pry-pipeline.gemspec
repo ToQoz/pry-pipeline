@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["toqoz403@gmail.com"]
   gem.description   = %q{Pipeline for pry}
   gem.summary       = %q{Pipeline for pry. This adds `_pipe_` and `|` methods to String and Symbol}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/ToQoz/pry-pipeline"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
