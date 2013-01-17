@@ -106,7 +106,7 @@ Start pry.
 
 ```
 $ pry
-[1] pry(main)> ams Pry
+[1] pry(main)> method_source Pry
 >>>>>>> select method with anything interface >>>>>>>
 >>>>>>> select `run_command`                  >>>>>>>
 From: /Users/toqoz/.rbenv/versions/1.9.3-p327-perf/lib/ruby/gems/1.9.1/gems/pry-0.9.10/lib/pry/pry_class.rb @ line 217:
