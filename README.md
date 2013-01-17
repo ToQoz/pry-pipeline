@@ -28,6 +28,7 @@ $ gem install pry-pipeline
 
 This usage is simple but unuseful.
 
+### Pipeline to pry's command
 ```
 $ pry
 [1] pry(main)> 'Pry.run_command' | '$'
@@ -49,6 +50,17 @@ def self.run_command(command_string, options={})
 
   Pry.new(:output => output, :input => StringIO.new(command_string), :commands => options[:commands], :prompt => proc {""}, :hooks => Pry::Hooks.new).rep(options[:context])
 end
+=> nil
+```
+
+### Pipeline to ruby method pry's command
+
+```
+$ pry
+[1] pry(main)> 'foo' | -> o { o.class }
+=> String
+[1] pry(main)> 'foo' | -> o { puts o }
+foo
 => nil
 ```
 
