@@ -53,7 +53,7 @@ end
 => nil
 ```
 
-### Pipeline to ruby method pry's command
+### Pipeline to ruby block
 
 ```
 $ pry
@@ -69,6 +69,17 @@ rb_obj_method(VALUE obj, VALUE vid)
 {
     return mnew(CLASS_OF(obj), obj, rb_to_id(vid), rb_cMethod, FALSE);
 }
+=> nil
+```
+
+### Pipeline to ruby block from pry's command with [pry-command_result](https://github.com/ToQoz/pry-command_result)
+
+```
+[1] pry(main)> command_result('$ Pry.run_command') | -> v { v.lines.grep(/From/).join("\n") }
+=> "From: /Users/toqoz/.rbenv/versions/1.9.3-p327-perf/lib/ruby/gems/1.9.1/gems/pry-0.9.11.3/lib/pry/pry_class.rb @ line 232:\n"
+
+[2] pry(main)> puts _
+From: /Users/toqoz/.rbenv/versions/1.9.3-p327-perf/lib/ruby/gems/1.9.1/gems/pry-0.9.11.3/lib/pry/pry_class.rb @ line 232:
 => nil
 ```
 
